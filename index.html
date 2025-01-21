@@ -6,38 +6,84 @@
     <title>Megha Kumari's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
             margin: 0;
             padding: 0;
+            color: #343a40;
+            cursor: url('custom-cursor.png'), auto;
+        }
+        .header, .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 700px;
+            margin: 20px auto;
             padding: 20px;
             text-align: center;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
+            border: 3px solid #6c757d;
         }
         h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 0 0 10px 0;
+            color: #495057;
         }
         p {
             font-size: 1.2em;
             line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #0056b3;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h2>Welcome to Megha Kumari's Portfolio</h2>
+    </div>
     <div class="container">
         <img src="image.png" alt="Profile Picture of Megha Kumari" class="profile-pic">
         <h1>Megha Kumari</h1>
         <p>Hello! I am Megha Kumari, a B.Tech student in the Computer Science branch at Banasthali Vidyapeeth. I am from Bihar and passionate about technology and coding. Welcome to my portfolio!</p>
+        <div class="social-links">
+            <a href="https://github.com/your-github-profile" target="_blank">
+                <img src="github-icon.png" alt="GitHub" width="32">
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+                <img src="linkedin-icon.png" alt="LinkedIn" width="32">
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Megha Kumari. All Rights Reserved.</p>
     </div>
 </body>
 </html>
