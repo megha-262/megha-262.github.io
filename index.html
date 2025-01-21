@@ -23,17 +23,25 @@
             max-width: 700px;
             margin: 20px auto;
             padding: 20px;
-            text-align: center;
             background-color: #89c2d9;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border: 5px dashed #ffffff;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
+            width: 200px;
+            height: 200px;
+            margin-left: 20px;
+            border-radius: 10px;
             border: 3px solid #ffffff;
+        }
+        .content {
+            max-width: 400px;
+            text-align: left;
         }
         h1 {
             font-size: 2.5em;
@@ -47,27 +55,26 @@
         }
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: flex-start;
+            gap: 15px;
         }
         .social-links a {
             text-decoration: none;
             color: #ffffff;
-            font-size: 1.5em;
             transition: transform 0.3s, color 0.3s;
         }
         .social-links a:hover {
             color: #d1e7f5;
             transform: scale(1.1);
         }
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+        }
         .footer {
             margin-top: 20px;
             font-size: 0.9em;
-        }
-        .social-links img {
-            width: 32px;
-            height: 32px;
-            border-radius: 5px;
         }
     </style>
 </head>
@@ -76,17 +83,22 @@
         <h2>Welcome to Megha Kumari's Portfolio</h2>
     </div>
     <div class="container">
-        <img src="image.png" alt="Profile Picture of Megha Kumari" class="profile-pic">
-        <h1>Megha Kumari</h1>
-        <p>Hello! I am Megha Kumari, a B.Tech student in the Computer Science branch at Banasthali Vidyapeeth. I am from Bihar and passionate about technology and coding. Welcome to my portfolio!</p>
-        <div class="social-links">
-            <a href="https://github.com/megha-262" target="_blank">
-                <img src="github-icon.png" alt="GitHub">
-            </a>
-            <a href="www.linkedin.com/in/megha-kumari-1a832831a" target="_blank">
-                <img src="linkedin-icon.png" alt="LinkedIn">
-            </a>
+        <div class="content">
+            <h1>Megha Kumari</h1>
+            <p>Hello! I am Megha Kumari, a B.Tech student in the Computer Science branch at Banasthali Vidyapeeth. I am from Bihar and passionate about technology and coding. Welcome to my portfolio!</p>
+            <div class="social-links">
+                <a href="https://github.com/megha-262" target="_blank">
+                    <img src="github-icon.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/megha-kumari-1a832831a" target="_blank">
+                    <img src="linkedin-icon.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/your-instagram-profile" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+            </div>
         </div>
+        <img src="image.png" alt="Profile Picture of Megha Kumari" class="profile-pic">
     </div>
     <div class="footer">
         <p>&copy; 2025 Megha Kumari. All Rights Reserved.</p>
