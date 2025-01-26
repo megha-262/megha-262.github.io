@@ -20,28 +20,48 @@
             padding: 15px 0;
         }
         .container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 20px auto;
-            padding: 20px;
-            background-color: #89c2d9;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            border: 5px dashed #ffffff;
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
+        }
+        .cloud {
+            background: #89c2d9;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .cloud::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #89c2d9;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .cloud.left {
+            margin-right: 20px;
+        }
+        .cloud.left::after {
+            top: -20px;
+            left: -25px;
+        }
+        .cloud.right {
+            margin-left: 20px;
+        }
+        .cloud.right::after {
+            top: -20px;
+            right: -25px;
         }
         .profile-pic {
             width: 200px;
             height: 200px;
-            margin-left: 20px;
             border-radius: 10px;
             border: 3px solid #ffffff;
-        }
-        .content {
-            max-width: 400px;
-            text-align: left;
         }
         h1 {
             font-size: 2.5em;
@@ -51,15 +71,14 @@
         p {
             font-size: 1.2em;
             line-height: 1.6;
-            margin-bottom: 20px;
         }
         .welcome-text {
             font-weight: bold;
         }
         .social-links {
+            margin-top: 15px;
             display: flex;
-            justify-content: flex-start;
-            gap: 15px;
+            gap: 10px;
         }
         .social-links a {
             text-decoration: none;
@@ -86,7 +105,12 @@
         <h2>Welcome to Megha Kumari's Portfolio</h2>
     </div>
     <div class="container">
-        <div class="content">
+        <!-- Cloud for profile picture -->
+        <div class="cloud left">
+            <img src="image.png" alt="Profile Picture of Megha Kumari" class="profile-pic">
+        </div>
+        <!-- Cloud for content -->
+        <div class="cloud right">
             <h1>Megha Kumari</h1>
             <p>Hello! I am Megha Kumari, a B.Tech student in the Computer Science branch at Banasthali Vidyapeeth. I am from Bihar and passionate about technology and coding. <span class="welcome-text">Welcome to my portfolio!</span></p>
             <div class="social-links">
@@ -101,7 +125,6 @@
                 </a>
             </div>
         </div>
-        <img src="image.png" alt="Profile Picture of Megha Kumari" class="profile-pic">
     </div>
     <div class="footer">
         <p>&copy; 2025 Megha Kumari. All Rights Reserved.</p>
