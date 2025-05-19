@@ -1,133 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megha Kumari's Portfolio</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffe4e1; /* Light pink */
-            margin: 0;
-            padding: 0;
-            color: #ff6666; /* Light red */
-            cursor: url('custom-cursor.png'), auto;
-        }
-        .header, .footer {
-            background-color: #ff9999; /* Slightly darker pink for header and footer */
-            color: #ffffff;
-            text-align: center;
-            padding: 15px 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-        }
-        .cloud {
-            background: #ffc0cb; /* Cloud color is soft pink */
-            padding: 20px;
-            border-radius: 50px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-        .cloud::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background: #ffc0cb;
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-        .cloud.left {
-            margin-right: 20px;
-        }
-        .cloud.left::after {
-            top: -20px;
-            left: -25px;
-        }
-        .cloud.right {
-            margin-left: 20px;
-        }
-        .cloud.right::after {
-            top: -20px;
-            right: -25px;
-        }
-        .profile-pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 10px;
-            border: 3px solid #ffffff;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 0 0 10px 0;
-            color: #ff1493; /* Pink color for heading */
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-        .welcome-text {
-            font-weight: bold;
-        }
-        .social-links {
-            margin-top: 15px;
-            display: flex;
-            gap: 10px;
-        }
-        .social-links a {
-            text-decoration: none;
-            color: #ff6666; /* Light red */
-            transition: transform 0.3s, color 0.3s;
-        }
-        .social-links a:hover {
-            color: #ff99aa; /* Lighter red on hover */
-            transform: scale(1.1);
-        }
-        .social-links img {
-            width: 24px;
-            height: 24px;
-            border-radius: 5px;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Megha Kumari's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      cursor: url('custom-cursor.png'), auto;
+    }
+  </style>
 </head>
-<body>
-    <div class="header">
-        <h2>Welcome to Megha Kumari's Portfolio</h2>
+<body class="font-sans bg-pink-100 text-pink-500 m-0 p-0">
+
+  <!-- Header -->
+  <div class="bg-pink-300 text-white text-center py-4">
+    <h2 class="text-xl font-semibold">Welcome to Megha Kumari's Portfolio</h2>
+  </div>
+
+  <!-- Main Container -->
+  <div class="max-w-3xl mx-auto my-6 flex flex-col md:flex-row items-center justify-between relative gap-4 px-4">
+
+    <!-- Cloud Left (Profile Picture) -->
+    <div class="bg-pink-200 p-5 rounded-full shadow-md relative mr-0 md:mr-4">
+      <img src="image.png" alt="Profile Picture of Megha Kumari"
+        class="w-48 h-48 rounded-md border-4 border-white object-cover" />
+      <div class="absolute w-12 h-12 bg-pink-200 rounded-full shadow-md -top-5 -left-6"></div>
     </div>
-    <div class="container">
-        <!-- Cloud for profile picture -->
-        <div class="cloud left">
-            <img src="image.png" alt="Profile Picture of Megha Kumari" class="profile-pic">
-        </div>
-        <!-- Cloud for content -->
-        <div class="cloud right">
-            <h1>Megha Kumari</h1>
-            <p>Hello! I am Megha Kumari, a B.Tech student in the Computer Science branch at Banasthali Vidyapeeth. I am from Bihar and passionate about technology and coding. <span class="welcome-text">Welcome to my portfolio!</span></p>
-            <div class="social-links">
-                <a href="https://github.com/megha-262" target="_blank">
-                    <img src="github-icon.png" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/megha-kumari-1a832831a" target="_blank">
-                    <img src="linkedin-icon.png" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/your-instagram-profile" target="_blank">
-                    <img src="instagram-icon.png" alt="Instagram">
-                </a>
-            </div>
-        </div>
+
+    <!-- Cloud Right (Text Content) -->
+    <div class="bg-pink-200 p-5 rounded-3xl shadow-md relative ml-0 md:ml-4">
+      <div class="absolute w-12 h-12 bg-pink-200 rounded-full shadow-md -top-5 -right-6"></div>
+      <h1 class="text-4xl font-bold text-pink-600 mb-2">Megha Kumari</h1>
+      <p class="text-lg leading-relaxed">
+        Hello! I am Megha Kumari, a B.Tech student in the Computer Science branch at Banasthali Vidyapeeth.
+        I am from Bihar and passionate about technology and coding.
+        <span class="font-bold">Welcome to my portfolio!</span>
+      </p>
+
+      <!-- Social Links -->
+      <div class="flex gap-3 mt-4">
+        <a href="https://github.com/megha-262" target="_blank" class="transition-transform transform hover:scale-110 hover:text-pink-400">
+          <img src="github-icon.png" alt="GitHub" class="w-6 h-6 rounded"/>
+        </a>
+        <a href="https://www.linkedin.com/in/megha-kumari-1a832831a" target="_blank" class="transition-transform transform hover:scale-110 hover:text-pink-400">
+          <img src="linkedin-icon.png" alt="LinkedIn" class="w-6 h-6 rounded"/>
+        </a>
+        <a href="https://www.instagram.com/your-instagram-profile" target="_blank" class="transition-transform transform hover:scale-110 hover:text-pink-400">
+          <img src="instagram-icon.png" alt="Instagram" class="w-6 h-6 rounded"/>
+        </a>
+      </div>
     </div>
-    <div class="footer">
-        <p>&copy; 2025 Megha Kumari. All Rights Reserved.</p>
-    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="bg-pink-300 text-white text-center py-3 text-sm mt-6">
+    <p>&copy; 2025 Megha Kumari. All Rights Reserved.</p>
+  </div>
+
 </body>
 </html>
